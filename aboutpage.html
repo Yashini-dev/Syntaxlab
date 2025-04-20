@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - SyntaxLab</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: monospace;
+        }
+
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+            padding: 0;
+            margin: 0;
+        }
+
+        header {
+            background-color: white;
+            color: black;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        header img {
+            max-width: 120px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            color: black;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: gray;
+        }
+
+        .nav-buttons .btn {
+            background-color: black;
+                       border: none;
+            color: white;
+            padding: 8px 20px;
+            font-size: 16px;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .nav-buttons .btn:hover {
+            background-color: #555;
+        }
+
+        .aboutinfo {
+            display: flex;
+            justify-content: space-between;
+            padding: 40px 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .about-text {
+            flex: 1;
+            max-width: 100%;
+        }
+
+        .about-text h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .about-text p {
+            font-size: 1.2rem;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .about-image img {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .scroll-btn {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+
+        .scroll-btn a {
+            background-color: #333;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
+        }
+
+        .scroll-btn a:hover {
+            background-color: #555;
+        }
+
+        .mission-section {
+            background-color: #fff;
+            padding: 40px 30px;
+            max-width: 1200px;
+            margin: 40px auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: row;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .mission-section img {
+            max-width: 300px;
+            border-radius: 10px;
+        }
+
+        .mission-content {
+            flex: 1;
+        }
+
+        .mission-content h2 {
+            font-size: 2rem;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .mission-content p {
+            font-size: 1.1rem;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        /* Cards Section */
+        .cards-section {
+            max-width: 1200px;
+            margin: 50px auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .about-text{
+            align-content: center;
+        }
+        .card {
+            background-color: #fff;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            width: 280px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card h3 {
+            font-size: 1.6rem;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            font-size: 1.1rem;
+            color: #777;
+        }
+
+        /* Vision Section */
+        .vision-section {
+            background-color: #fff;
+            padding: 40px 30px;
+            max-width: 1200px;
+            margin: 50px auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .vision-section h2 {
+            font-size: 2rem;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .vision-section p {
+            font-size: 1.1rem;
+            color: #555;
+            line-height: 1.6;
+        }
+/* Footer Styles */
+.footer {
+            background-color: #343a40;
+            color: white;
+            padding: 50px 0;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .footer h5 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .footer p {
+            font-size: 14px;
+            line-height: 1.8;
+            margin-bottom: 10px;
+        }
+
+        .footer ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer ul li a {
+            text-decoration: none;
+            color: #ffffff;
+            transition: color 0.3s ease;
+        }
+
+        .footer ul li a:hover {
+            color: #007bff;
+        }
+
+        .footer a {
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+
+        .footer a:hover {
+            color: #007bff;
+        }
+
+        .footer .bi {
+            font-size: 18px;
+            margin-right: 8px;
+        }
+
+        .footer hr {
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            margin: 20px 0;
+        }
+
+        .footer .text-center p {
+            font-size: 13px;
+            margin: 0;
+        }
+
+        .footer .social-icons a {
+            font-size: 18px;
+            margin-right: 15px;
+            color: #ffffff;
+            transition: color 0.3s ease;
+        }
+
+        .footer .social-icons a:hover {
+            color: #333;
+        }
+
+        .footer .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .footer .col-md-4,
+        .footer .col-md-2,
+        .footer .col-md-3 {
+            flex: 1;
+            margin: 10px;
+        }
+
+        .footer .col-md-2 {
+            max-width: 250px;
+        }
+
+        .footer .col-md-3 {
+            max-width: 300px;
+        }
+
+        .footer .text-center {
+            text-align: center;
+            width: 100%;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="nav-links">
+            <a href="./aboutpage.html">About</a>
+            <a href="./explore.html">Explore</a>
+            <a href="./course.html">Courses</a>
+        </div>
+        <a href="./code.html"><img src="./img/Add a heading.png" alt="logo"></a>
+        <div class="nav-buttons">
+            <a href="./login.html" style="padding-bottom: 3px; text-decoration: none;"   class="btn" type="button">Login</a>
+            <a href="./Signup.html" style="padding-bottom: 3px; text-decoration: none;" class="btn" type="button">Join For Free</a>
+        </div>
+    </header>
+
+    <!-- About Info -->
+    <div class="aboutinfo">
+        <div class="about-text">
+            <h1>About Us</h1>
+            <p>
+                Welcome to <strong>Styntax Lab</strong>, a hub for aspiring developers, seasoned programmers, and tech enthusiasts who 
+                want to master the art and science of coding. Our platform is built for those who want to improve their coding 
+                skills at their own pace, with access to carefully designed learning resources.
+                Whether you’re a beginner just starting or an experienced developer looking to stay updated with the latest trends, 
+                <strong>Styntax Lab</strong> provides the tools, community, and support to help you grow and succeed in your coding journey.
+            </p>
+        </div>
+        <div class="about-image">
+            <img src="./img/abut.png" alt="About Styntax Lab">
+        </div>
+    </div>
+
+    <!-- Scroll Button -->
+    <div class="scroll-btn">
+        <a href="#cards">Scroll Down</a>
+    </div>
+
+    <!-- Mission Section -->
+    <div class="mission-section">
+        <img src="./unedited mission.png" alt="Our Mission">
+        <div class="mission-content">
+            <h2>Our Mission</h2>
+            <p>
+                At <strong>Styntax Lab</strong>, our mission is to empower learners with the skills and knowledge to excel in programming 
+                and software development. We aim to:<br>
+                - Simplify the learning process by breaking down complex concepts into digestible content.<br>
+                - Equip learners with practical tools and techniques to solve real-world challenges.<br>
+                - Inspire creativity and innovation by fostering a collaborative and inclusive community.<br>
+                - Provide a supportive learning environment where learners can get guidance from experts and peers alike.
+            </p>
+            <p>
+                Whether you’re learning to code for the first time or advancing your skills, <strong>Styntax Lab</strong> is here to guide 
+                you every step of the way. We offer a variety of resources, from interactive tutorials to comprehensive video lessons, 
+                designed to make your coding journey enjoyable and rewarding.
+            </p>
+        </div>
+    </div>
+
+    <!-- What We Offer -->
+    <div class="about-text">
+        <h1 style="display: flex; justify-content: center;">What We Offer</h1>
+        <div class="cards-section" id="cards">
+            <div class="card">
+                <h3>Comprehensive Learning Resources</h3>
+                <p>Step-by-step tutorials, simplified notes, and engaging video lectures designed to make learning easy and accessible.</p>
+            </div>
+            <div class="card">
+                <h3>Hands-On Projects</h3>
+                <p>Apply your knowledge with real-world projects and coding challenges to sharpen your skills.</p>
+            </div>
+            <div class="card">
+                <h3>Coding Challenges</h3>
+                <p>Improve your problem-solving abilities with curated coding challenges and practice problems.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Vision Section -->
+    <div class="vision-section">
+        <h2>Our Vision</h2>
+        <p>
+            We envision a world where technology empowers individuals to turn their ideas into reality. At Styntax Lab, we aim to be 
+            a catalyst for that transformation by providing a platform that nurtures talent, fosters creativity, and drives innovation. 
+            Our goal is not just to teach coding but to inspire a lifelong passion for technology and problem-solving. With Styntax Lab, 
+            you’re not just learning to code—you’re building a future where you can lead, innovate, and make a difference.
+        </p>
+    </div>
+
+ <!-- Footer -->
+ <footer class="footer">
+    <div class="container">
+        <div class="col-md-4">
+            <h5>About CodeFolio</h5>
+            <p>CodeFolio is your ultimate destination to learn coding, explore programming languages, and enhance your tech career.</p>
+        </div>
+
+        <div class="col-md-2">
+            <h5>Quick Links</h5>
+            <ul class="list-unstyled">
+                <li><a href="./aboutpage.html">About Us</a></li>
+                <li><a href="./explore.html">Explore</a></li>
+                <li><a href="./course.html">Courses</a></li>
+                <li><a href="./login.html">Login</a></li>
+                <li><a href="./Signup.html">Sign Up</a></li>
+            </ul>
+        </div>
+
+        <div class="col-md-3">
+            <h5>Contact Us</h5>
+            <p>Email: support@codefolio.com<br>Phone: +91-9876543210<br>Address: 123, Tech Street, Chennai, India</p>
+        </div>
+
+        <div class="col-md-3">
+            <h5>Follow Us</h5>
+            <a href="#" class="text-white me-3"><i class="bi bi-facebook"></i> Facebook</a><br>
+            <a href="#" class="text-white me-3"><i class="bi bi-twitter"></i> Twitter</a><br>
+            <a href="#" class="text-white me-3"><i class="bi bi-instagram"></i> Instagram</a><br>
+            <a href="#" class="text-white me-3"><i class="bi bi-linkedin"></i> LinkedIn</a><br>
+        </div>
+    </div>
+    <hr>
+    <div class="text-center">
+        <p>&copy; 2025 CodeFolio. All Rights Reserved.</p>
+    </div>
+</footer>
+
+    <script>
+        // Smooth Scroll Functionality
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    
+        // Modal Popup for Login/Join
+        const loginBtn = document.querySelector('.btn:nth-child(1)');
+        const joinBtn = document.querySelector('.btn:nth-child(2)');
+        const modal = document.createElement('div');
+        modal.style.position = 'fixed';
+        modal.style.top = '50%';
+        modal.style.left = '50%';
+        modal.style.transform = 'translate(-50%, -50%)';
+        modal.style.backgroundColor = 'white';
+        modal.style.padding = '20px';
+        modal.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.3)';
+        modal.style.display = 'none';
+        modal.style.zIndex = '1000';
+        modal.innerHTML = `
+            <h2 style="margin-bottom: 10px;">Welcome to Styntax Lab</h2>
+            <p>Login or Join us to explore more.</p>
+            <button onclick="modal.style.display='none'" style="padding: 10px 20px; margin-top: 10px;">Close</button>
+        `;
+        document.body.appendChild(modal);
+    
+        loginBtn.addEventListener('click', () => {
+            modal.style.display = 'block';
+        });
+        joinBtn.addEventListener('click', () => {
+            modal.style.display = 'block';
+        });
+    
+       
+    
+        // Dynamic Year in Footer
+        const footerYear = document.querySelector('footer p:first-child');
+        const currentYear = new Date().getFullYear();
+        footerYear.textContent = `© ${currentYear} Styntax Lab. All rights reserved.`;
+    </script>
+    
+
+</body>
+</html>

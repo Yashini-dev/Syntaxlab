@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syntax Lab - Video Gallery</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+            color: #212529;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .sidebar {
+            height: 100vh;
+            background-color: #343a40;
+            color: #fff;
+            padding: 20px;
+            overflow-y: auto;
+            box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .sidebar h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 22px;
+        }
+
+        .video-item {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            background-color: #495057;
+            cursor: pointer;
+            transition: transform 0.3s, background-color 0.3s ease;
+        }
+
+        .video-item:hover {
+            background-color: #6c757d;
+            transform: scale(1.05);
+        }
+
+        .video-item img {
+            width: 50px;
+            height: 50px;
+            border-radius: 5px;
+            margin-right: 15px;
+        }
+
+        .video-item span {
+            font-size: 16px;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        .video-container {
+            padding: 40px;
+            text-align: center;
+        }
+
+        .video-container video {
+            width: 100%;
+            max-width: 900px;
+            border: 2px solid #dee2e6;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .video-title {
+            font-size: 22px;
+            margin-bottom: 20px;
+            font-weight: bold;
+            color: #212529;
+        }
+
+        .btn-custom {
+            background-color: #343a40;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .btn-custom:hover {
+            background-color: #495057;
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 768px) {
+            .sidebar {
+                height: auto;
+            }
+
+            .video-container {
+                padding: 20px;
+            }
+
+            .video-container video {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container-fluid">
+    <div class="row">
+        <!-- Sidebar -->
+        <div class="col-md-3 sidebar">
+            <h2>Introduction To Web Development</h2>
+            <div class="video-item" onclick="playVideo('video/web/video1.mp4', 'Introduction to Python')">
+                <img src="video/web/thumbnail1.jpg" alt="Thumbnail 1">
+                <span>Video 1: Introduction to web development </span>
+            </div>
+            <div class="video-item" onclick="playVideo('video/web/video2.mp4', 'Python Basics')">
+                <img src="video/web/thumbnail2.jpg" alt="Thumbnail 2">
+                <span>Video 2: HTML Elements and attributes</span>
+            </div>
+            <div class="video-item" onclick="playVideo('video/web/video3.mp4', 'Advanced Python Techniques')">
+                <img src="video/web/thumbnail3.jpg" alt="Thumbnail 3">
+                <span>Video 3: Html lists and table</span>
+            </div>
+            <div class="video-item" onclick="playVideo('video/web/video4.mp4', 'Python Projects')">
+                <img src="video/web/thumbnail4.jpg" alt="Thumbnail 4">
+                <span>Video 4: Media elements and forces</span>
+            </div>
+            <div class="video-item" onclick="playVideo('video/web/video5.mp4', 'Data Types in Python')">
+                <img src="video/web/thumbnail5.jpg" alt="Thumbnail 5">
+                <span>Video 5: Structuring</span>
+            </div>
+            <div class="video-item" onclick="playVideo('video/web/video6.mp4', 'Loops in Python')">
+                <img src="video/web/thumbnail6.jpg" alt="Thumbnail 6">
+                <span>Video 6: What are selectors? </span>
+            </div>
+            <div class="video-item" onclick="playVideo('video/web/video7.mp4', 'Python Functions')">
+                <img src="video/web/thumbnail7.jpg" alt="Thumbnail 7">
+                <span>Video 7: properties of css </span>
+            </div>
+            <div class="video-item" onclick="playVideo('video/web/video8.mp4', 'File Handling')">
+                <img src="video/web/thumbnail8.jpg" alt="Thumbnail 8">
+                <span>Video 8: Styling forms in CSS</span>
+            </div>
+            <div class="video-item" onclick="playVideo('video/web/video9.mp4', 'Python Libraries')">
+                <img src="video/web/thumbnail9.jpg" alt="Thumbnail 9">
+                <span>Video 9: What is responsiveness </span>
+            </div>
+            <div class="video-item" onclick="playVideo('video/web/video10.mp4', 'Automation with Python')">
+                <img src="video/web/thumbnail10.jpg" alt="Thumbnail 10">
+                <span>Video 10: Debbuging in CSS</span>
+            </div>
+            <div class="video-item" onclick="playVideo('video/web/video10.mp4', 'Automation with Python')">
+                <img src="video/web/thumbnail10.jpg" alt="Thumbnail 10">
+                <span>Video 11: Positioning and its properties </span>
+            </div>
+            <div class="video-item" onclick="playVideo('video/web/video10.mp4', 'Automation with Python')">
+                <img src="video/web/thumbnail10.jpg" alt="Thumbnail 10">
+                <span>Video 12: FlexBox in CSS </span>
+            </div>
+            <div class="video-item" onclick="playVideo('video/web/video10.mp4', 'Automation with Python')">
+                <img src="video/web/thumbnail10.jpg" alt="Thumbnail 10">
+                <span>Video 13: CSS grid</span>
+            </div>
+            <div class="video-item" onclick="playVideo('video/web/video10.mp4', 'Automation with Python')">
+                <img src="video/web/thumbnail10.jpg" alt="Thumbnail 10">
+                <span>Video 14: Animations in CSS</span>
+            </div>
+            <div class="video-item" onclick="playVideo('video/web/video10.mp4', 'Automation with Python')">
+                <img src="video/web/thumbnail10.jpg" alt="Thumbnail 10">
+                <span>Video 15: Bootstrap</span>
+            </div>
+            <div class="video-item" onclick="playVideo('video/web/video10.mp4', 'Automation with Python')">
+                <img src="video/web/thumbnail10.jpg" alt="Thumbnail 10">
+                <span>Video 16: bootstrap Customization</span>
+            </div>
+            <div class="video-item" onclick="playVideo('video/web/video10.mp4', 'Automation with Python')">
+                <img src="video/web/thumbnail10.jpg" alt="Thumbnail 10">
+                <span>Video 17: Grid Layout</span>
+            </div>
+            <div class="video-item" onclick="playVideo('video/web/video10.mp4', 'Automation with Python')">
+                <img src="video/web/thumbnail10.jpg" alt="Thumbnail 10">
+                <span>Video 18: Bootstrap components</span>
+            </div>
+            <div class="video-item" onclick="playVideo('video/web/video10.mp4', 'Automation with Python')">
+                <img src="video/web/thumbnail10.jpg" alt="Thumbnail 10">
+                <span>Video 19: Javascript Introduction</span>
+            </div>
+            <div class="video-item" onclick="playVideo('video/web/video10.mp4', 'Automation with Python')">
+                <img src="video/web/thumbnail10.jpg" alt="Thumbnail 10">
+                <span>Video 20: Javascript </span>
+            </div>
+            <div class="video-item" onclick="playVideo('video/web/video10.mp4', 'Automation with Python')">
+                <img src="video/web/thumbnail10.jpg" alt="Thumbnail 10">
+                <span>Video 21: What is DOM</span>
+            </div>
+            <div class="video-item" onclick="playVideo('video/web/video10.mp4', 'Automation with Python')">
+                <img src="video/web/thumbnail10.jpg" alt="Thumbnail 10">
+                <span>Video 22: How Javascript works?</span>
+            </div>
+            <div class="video-item" onclick="playVideo('video/web/video10.mp4', 'Automation with Python')">
+                <img src="video/web/thumbnail10.jpg" alt="Thumbnail 10">
+                <span>Video 23: Standard Library Modules</span>
+            </div>
+            <div class="video-item" onclick="playVideo('video/web/video10.mp4', 'Automation with Python')">
+                <img src="video/web/thumbnail10.jpg" alt="Thumbnail 10">
+                <span>Video 24: Function Arguments </span>
+            </div>
+            <div class="video-item" onclick="playVideo('video/web/video10.mp4', 'Automation with Python')">
+                <img src="video/web/thumbnail10.jpg" alt="Thumbnail 10">
+                <span>Video 25: Reading and writing Files</span>
+            </div>
+            
+        </div>
+
+        <!-- Video Container -->
+        <div class="col-md-9 video-container">
+            <div class="video-title" id="videoTitle">Introduction to Python</div>
+            <video id="videoPlayer" controls>
+                <source src="video/video1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="d-flex justify-content-center gap-3">
+                <button class="btn btn-custom" onclick="togglePlayPause()">Play/Pause</button>
+                <button class="btn btn-custom" onclick="restartVideo()">Restart</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const videoPlayer = document.getElementById('videoPlayer');
+    const videoTitle = document.getElementById('videoTitle');
+
+    function playVideo(videoSrc, title) {
+        videoPlayer.src = videoSrc;
+        videoPlayer.play();
+        videoTitle.textContent = title;
+    }
+
+    function togglePlayPause() {
+        if (videoPlayer.paused) {
+            videoPlayer.play();
+        } else {
+            videoPlayer.pause();
+        }
+    }
+
+    function restartVideo() {
+        videoPlayer.currentTime = 0;
+        videoPlayer.play();
+    }
+</script>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

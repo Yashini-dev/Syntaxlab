@@ -1,0 +1,452 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+    font-weight: 400;
+}
+
+body {
+    background-color: #f3f4f6;
+    color: #333;
+}
+
+
+.header {
+    background-color: #fff;
+    
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    
+    
+}
+
+.header img {
+    max-width: 100px;
+    max-height: 150px;
+    justify-content: center;
+    
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #555;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: black;
+}
+
+.nav-buttons .btn {
+    border-radius: 20px;
+    height: 38px;
+    background-color: black;
+    border: none;
+    color: white;
+    font-weight: 500;
+    padding: 5px 15px;
+    transition: all 0.3s ease;
+}
+
+.nav-buttons .btn:hover {
+    background-color: #555;
+    color: white;
+}
+
+
+
+
+/* Ads Section */
+.ads {
+    width: 100%;
+    height: 500px;
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.ads img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    
+}
+
+.ads-content {
+    max-width: 50%;
+    padding: 0 20px;
+}
+.btn-primary{
+    background-color: black;
+    border: #333;
+}
+.btn-primary:hover{
+    background-color: #555;
+}
+
+.ads h1 {
+    font-size: 36px;
+    font-weight: 700;
+    color: black;
+    margin-bottom: 20px;
+}
+
+.ads p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #555;
+    margin: 0;
+}
+.companies{
+    background: linear-gradient(to bottom right, #fff, #fff);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+.companies img{
+    width: 85%;
+    height: auto;
+}
+.companies{
+    color: black;
+    font-size:x-large;
+    font-weight:bolder;
+}
+.specialization{
+    background-color: black;
+    width: 100%;
+    height: 730px;
+    margin: 20px auto;
+    padding: 50px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.824);
+
+}
+.specialization h6{
+padding-left: 100px;
+padding-right: 100px;
+font-size:x-large;
+    font-weight:bolder;
+    color: rgb(255, 252, 252);
+    text-align: center;
+    
+}
+.invest{
+    border-radius: 15px;
+    width: 100%;
+    height: 250px;
+
+    padding-right: 120px;
+    padding-top: 70px;
+    display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: space-between;
+text-align: center;
+
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #343a40;
+    color: white;
+    padding: 40px 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.footer h5 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.footer p {
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 10px;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer ul li {
+    margin-bottom: 10px;
+}
+
+.footer ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+.footer ul li a:hover {
+    color: #007bff;
+}
+
+.footer a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: #007bff;
+}
+
+.footer .bi {
+    font-size: 18px;
+    margin-right: 8px;
+}
+
+.footer hr {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    margin: 20px 0;
+}
+
+.footer .text-center p {
+    font-size: 13px;
+    margin: 0;
+}
+
+.footer .social-icons a {
+    font-size: 18px;
+    margin-right: 15px;
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+.footer .social-icons a:hover {
+    color: #333;
+}
+
+/* Features Section */
+
+.feature-icon {
+    font-size: 50px;
+    color: #555;
+}
+
+.features h5 {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.features p {
+    color: #666;
+}
+
+/* Testimonials Section */
+.testimonials {
+    background-color: #f5f5f5;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.testimonials h2 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.testimonial {
+    border-left: 4px solid #555;
+}
+
+.testimonial p {
+    font-size: 14px;
+    color: #555;
+}
+
+/* FAQs Section */
+.faqs h2 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.accordion-button {
+    background-color: #555;
+    color: #fff;
+    font-weight: bold;
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+    background-color: #a8a6a6;
+
+
+}
+
+.accordion-item {
+    border: none;
+}
+
+.accordion-body {
+    background-color: #f9f9f9;
+}
+
+/* How It Works Section */
+.how-it-works {
+    background-color: #f9f9f9;
+}
+
+.how-icon {
+    font-size: 50px;
+    color: #555;
+}
+
+.how-it-works h5 {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.how-it-works p {
+    color: #666;
+}
+
+/* Pricing Section */
+.pricing {
+    background-color: #f5f5f5;
+}
+
+.pricing-card {
+    border-radius: 10px;
+}
+
+.pricing-card h5 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.pricing-card .price {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.pricing-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.pricing-card ul li {
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* Blog Section */
+.blog h2 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.blog-card {
+    border-radius: 10px;
+}
+
+.blog-card img {
+    border-radius: 10px;
+}
+
+.blog-card h5 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Newsletter Section */
+.newsletter h2 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.newsletter p {
+    font-size: 16px;
+}
+
+.newsletter-form input {
+    width: 50%;
+    margin: 0 auto;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Testimonials Section */
+.testimonials h2 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.testimonial-card {
+    border-radius: 10px;
+}
+
+.testimonial-card p {
+    font-style: italic;
+    color: #555;
+}
+
+/* Team Section */
+.team h2 {
+    font-size: 24px;
+}
+
+.team-card img {
+    width: 100px;
+    height: 100px;
+}
+
+.team-card h5 {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* FAQs Section */
+.accordion .card {
+    margin-bottom: 15px;
+}
+
+.accordion .card-header button {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Contact Section */
+.contact h2 {
+    font-size: 24px;
+}
+
+.contact form .form-control {
+    border-radius: 5px;
+}
+
+.contact button {
+    margin-top: 10px;
+}
+
+
+

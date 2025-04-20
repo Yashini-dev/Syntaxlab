@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore - Syntax Lab</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: monospace;
+        }
+
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: white;
+            color: black;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        header img {
+            max-width: 120px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            color: black;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: gray;
+        }
+
+        .hero-section {
+            background: linear-gradient(to right, #333, #555);
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .hero-section h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .hero-section p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            background-color: black;
+            color: white;
+            padding: 10px 20px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #555;
+        }
+
+        .content-section {
+            padding: 40px 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .content-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            width: 280px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card h3 {
+            font-size: 1.6rem;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+
+        .card img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 15px;
+            border-radius: 5px;
+        }
+
+        /* Footer Styles */
+        .footer {
+            background-color: #343a40;
+            color: white;
+            padding: 50px 0;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .footer h5 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .footer p {
+            font-size: 14px;
+            line-height: 1.8;
+            margin-bottom: 10px;
+        }
+
+        .footer ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer ul li a {
+            text-decoration: none;
+            color: #ffffff;
+            transition: color 0.3s ease;
+        }
+
+        .footer ul li a:hover {
+            color: #007bff;
+        }
+
+        .footer a {
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+
+        .footer a:hover {
+            color: #007bff;
+        }
+
+        .footer .bi {
+            font-size: 18px;
+            margin-right: 8px;
+        }
+
+        .footer hr {
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            margin: 20px 0;
+        }
+
+        .footer .text-center p {
+            font-size: 13px;
+            margin: 0;
+        }
+
+        .footer .social-icons a {
+            font-size: 18px;
+            margin-right: 15px;
+            color: #ffffff;
+            transition: color 0.3s ease;
+        }
+
+        .footer .social-icons a:hover {
+            color: #333;
+        }
+
+        .footer .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .footer .col-md-4,
+        .footer .col-md-2,
+        .footer .col-md-3 {
+            flex: 1;
+            margin: 10px;
+        }
+
+        .footer .col-md-2 {
+            max-width: 250px;
+        }
+
+        .footer .col-md-3 {
+            max-width: 300px;
+        }
+
+        .footer .text-center {
+            text-align: center;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <a href="./code.html"><img src="./img/Add a heading.png" alt="Syntax Lab Logo"></a>
+        <nav class="nav-links">
+            <a href="./aboutpage.html">About</a>
+            <a href="./explore.html">Explore</a>
+            <a href="./course.html">Courses</a>
+            <a href="./login.html">Login</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <h1>Discover, Learn, and Build</h1>
+        <p>Explore a vast array of resources designed to make your coding journey seamless and enjoyable.</p>
+        <button class="btn">Get Started</button>
+    </section>
+
+    <!-- Content Section -->
+    <section class="content-section">
+        <h2>Featured Content</h2>
+        <div class="cards">
+            <div class="card">
+                <img src="./img/tut" alt="Tutorials">
+                <h3>Step-by-Step Tutorials</h3>
+                <p>Learn coding concepts with detailed tutorials and guides.</p>
+            </div>
+            <div class="card">
+                <img src="./img/proj.webp" alt="Projects">
+                <h3>Real-World Projects</h3>
+                <p>Build projects to apply your coding skills in real-world scenarios.</p>
+            </div>
+            <div class="card">
+                <img src="./img/Multicultural_Communities_vector_2.jpg" alt="Community">
+                <h3>Engaged Community</h3>
+                <p>Connect with fellow learners and experts in our community.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Additional Resources Section -->
+    <section class="content-section">
+        
+        <div class="cards">
+            <div class="card">
+                <img src="./img/vidles.jpeg" alt="Video Lessons">
+                <h3>Interactive Video Lessons</h3>
+                <p>Watch and learn with engaging video content.</p>
+            </div>
+            <div class="card">
+                <img src="./img/Progetto-senza-titolo-3-896x504.webp" alt="Challenges">
+                <h3>Coding Challenges</h3>
+                <p>Test and improve your problem-solving skills.</p>
+            </div>
+            <div class="card">
+                <img src="./img/tool.avif" alt="Tools">
+                <h3>Developer Tools</h3>
+                <p>Access the best tools to streamline your workflow.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="content-section">
+        <h2>What Our Learners Say</h2>
+        <div class="cards">
+            <div class="card">
+                <h3>John Doe</h3>
+                <p>"SyntaxLab has transformed the way I learn to code. The tutorials are clear and concise, and the community support is incredible."</p>
+            </div>
+            <div class="card">
+                <h3>Jane Smith</h3>
+                <p>"I love the real-world projects! They’ve helped me build my portfolio and land job opportunities."</p>
+            </div>
+            <div class="card">
+                <h3>Michael Brown</h3>
+                <p>"The interactive coding challenges keep me motivated and constantly learning. Highly recommended!"</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Upcoming Events Section -->
+    <section class="content-section">
+        <h2>Upcoming Events</h2>
+        <div class="cards">
+            <div class="card">
+                <h3>Code Along Workshop</h3>
+                <p>Join us for a hands-on workshop where we build a real-world application together.</p>
+                <button class="btn">Register Now</button>
+            </div>
+            <div class="card">
+                <h3>Live Q&A with Experts</h3>
+                <p>Ask any coding-related questions to our experts in this live event!</p>
+                <button class="btn">Join the Session</button>
+            </div>
+            <div class="card">
+                <h3>Hackathon</h3>
+                <p>Compete with fellow coders in our exciting hackathon event to win prizes!</p>
+                <button class="btn">Sign Up</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="content-section">
+        <h2>From Our Blog</h2>
+        <div class="cards">
+            <div class="card">
+                <h3>Top 5 Coding Languages to Learn in 2025</h3>
+                <p>Stay ahead of the curve with the top programming languages that are in demand this year.</p>
+                <a href="#">Read More</a>
+            </div>
+            <div class="card">
+                <h3>How to Build Your First Web App</h3>
+                <p>Follow this beginner’s guide to creating your very own web application from scratch.</p>
+                <a href="#">Read More</a>
+            </div>
+            <div class="card">
+                <h3>The Best Tools for Web Development</h3>
+                <p>Explore the must-have tools and libraries every web developer should know.</p>
+                <a href="#">Read More</a>
+            </div>
+        </div>
+    </section>
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="col-md-4">
+            <h5>About CodeFolio</h5>
+            <p>CodeFolio is your ultimate destination to learn coding, explore programming languages, and enhance your tech career.</p>
+        </div>
+
+        <div class="col-md-2">
+            <h5>Quick Links</h5>
+            <ul class="list-unstyled">
+                <li><a href="./aboutpage.html">About Us</a></li>
+                <li><a href="./explore.html">Explore</a></li>
+                <li><a href="./course.html">Courses</a></li>
+                <li><a href="./login.html">Login</a></li>
+                <li><a href="./Signup.html">Sign Up</a></li>
+            </ul>
+        </div>
+
+        <div class="col-md-3">
+            <h5>Contact Us</h5>
+            <p>Email: support@codefolio.com<br>Phone: +91-9876543210<br>Address: 123, Tech Street, Chennai, India</p>
+        </div>
+
+        <div class="col-md-3">
+            <h5>Follow Us</h5>
+            <a href="#" class="text-white me-3"><i class="bi bi-facebook"></i> Facebook</a><br>
+            <a href="#" class="text-white me-3"><i class="bi bi-twitter"></i> Twitter</a><br>
+            <a href="#" class="text-white me-3"><i class="bi bi-instagram"></i> Instagram</a><br>
+            <a href="#" class="text-white me-3"><i class="bi bi-linkedin"></i> LinkedIn</a><br>
+        </div>
+    </div>
+    <hr>
+    <div class="text-center">
+        <p>&copy; 2025 CodeFolio. All Rights Reserved.</p>
+    </div>
+</footer>
+</body>
+</html>
