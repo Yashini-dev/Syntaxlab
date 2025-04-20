@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syntax Lab - Video Gallery</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+            color: #212529;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .sidebar {
+            height: 100vh;
+            background-color: #343a40;
+            color: #fff;
+            padding: 20px;
+            overflow-y: auto;
+            box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .sidebar h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 22px;
+        }
+
+        .video-item {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            background-color: #495057;
+            cursor: pointer;
+            transition: transform 0.3s, background-color 0.3s ease;
+        }
+
+        .video-item:hover {
+            background-color: #6c757d;
+            transform: scale(1.05);
+        }
+
+        .video-item img {
+            width: 50px;
+            height: 50px;
+            border-radius: 5px;
+            margin-right: 15px;
+        }
+
+        .video-item span {
+            font-size: 16px;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        .video-container {
+            padding: 40px;
+            text-align: center;
+        }
+
+        .video-container video {
+            width: 100%;
+            max-width: 900px;
+            border: 2px solid #dee2e6;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .video-title {
+            font-size: 22px;
+            margin-bottom: 20px;
+            font-weight: bold;
+            color: #212529;
+        }
+
+        .btn-custom {
+            background-color: #343a40;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .btn-custom:hover {
+            background-color: #495057;
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 768px) {
+            .sidebar {
+                height: auto;
+            }
+
+            .video-container {
+                padding: 20px;
+            }
+
+            .video-container video {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container-fluid">
+    <div class="row">
+        <!-- Sidebar -->
+        <div class="col-md-3 sidebar">
+            <h2>Python For Beginers</h2>
+            <div class="video-item" onclick="playVideo('video/python/video1.mp4', 'Introduction to Python')">
+                <img src="video/python/thumbnail1.jpg" alt="Thumbnail 1">
+                <span>Video 1: Introduction to Python</span>
+            </div>
+            <div class="video-item" onclick="playVideo('video/python/video2.mp4', 'Python Basics')">
+                <img src="video/python/thumbnail2.jpg" alt="Thumbnail 2">
+                <span>Video 2: Python installation and setup</span>
+            </div>
+            <div class="video-item" onclick="playVideo('video/python/video3.mp4', 'Advanced Python Techniques')">
+                <img src="video/python/thumbnail3.jpg" alt="Thumbnail 3">
+                <span>Video 3: Writting and running python scripts</span>
+            </div>
+            <div class="video-item" onclick="playVideo('video/python/video4.mp4', 'Python Projects')">
+                <img src="video/python/thumbnail4.jpg" alt="Thumbnail 4">
+                <span>Video 4: Variables and data types</span>
+            </div>
+            <div class="video-item" onclick="playVideo('video/python/video5.mp4', 'Data Types in Python')">
+                <img src="video/python/thumbnail5.jpg" alt="Thumbnail 5">
+                <span>Video 5: Input and output</span>
+            </div>
+            <div class="video-item" onclick="playVideo('video/python/video6.mp4', 'Loops in Python')">
+                <img src="video/python/thumbnail6.jpg" alt="Thumbnail 6">
+                <span>Video 6: Comments and Documentation</span>
+            </div>
+            <div class="video-item" onclick="playVideo('video/python/video7.mp4', 'Python Functions')">
+                <img src="video/python/thumbnail7.jpg" alt="Thumbnail 7">
+                <span>Video 7: Basic Operators </span>
+            </div>
+            <div class="video-item" onclick="playVideo('video/python/video8.mp4', 'File Handling')">
+                <img src="video/python/thumbnail8.jpg" alt="Thumbnail 8">
+                <span>Video 8: Conditional Statements</span>
+            </div>
+            <div class="video-item" onclick="playVideo('video/python/video9.mp4', 'Python Libraries')">
+                <img src="video/python/thumbnail9.jpg" alt="Thumbnail 9">
+                <span>Video 9: Loops </span>
+            </div>
+            <div class="video-item" onclick="playVideo('video/python/video10.mp4', 'Automation with Python')">
+                <img src="video/python/thumbnail10.jpg" alt="Thumbnail 10">
+                <span>Video 10: Nested loops</span>
+            </div>
+            <div class="video-item" onclick="playVideo('video/python/video10.mp4', 'Automation with Python')">
+                <img src="video/python/thumbnail10.jpg" alt="Thumbnail 10">
+                <span>Video 11: Break, Continue, and Pass</span>
+            </div>
+            <div class="video-item" onclick="playVideo('video/python/video10.mp4', 'Automation with Python')">
+                <img src="video/python/thumbnail10.jpg" alt="Thumbnail 10">
+                <span>Video 12: Exception Handling</span>
+            </div>
+            <div class="video-item" onclick="playVideo('video/python/video10.mp4', 'Automation with Python')">
+                <img src="video/python/thumbnail10.jpg" alt="Thumbnail 10">
+                <span>Video 13: Strings</span>
+            </div>
+            <div class="video-item" onclick="playVideo('video/python/video10.mp4', 'Automation with Python')">
+                <img src="video/python/thumbnail10.jpg" alt="Thumbnail 10">
+                <span>Video 14: Lists</span>
+            </div>
+            <div class="video-item" onclick="playVideo('video/python/video10.mp4', 'Automation with Python')">
+                <img src="video/python/thumbnail10.jpg" alt="Thumbnail 10">
+                <span>Video 15: Tuples</span>
+            </div>
+            <div class="video-item" onclick="playVideo('video/python/video10.mp4', 'Automation with Python')">
+                <img src="video/python/thumbnail10.jpg" alt="Thumbnail 10">
+                <span>Video 16: Sets</span>
+            </div>
+            <div class="video-item" onclick="playVideo('video/python/video10.mp4', 'Automation with Python')">
+                <img src="video/python/thumbnail10.jpg" alt="Thumbnail 10">
+                <span>Video 17: Dictionaries</span>
+            </div>
+            <div class="video-item" onclick="playVideo('video/python/video10.mp4', 'Automation with Python')">
+                <img src="video/python/thumbnail10.jpg" alt="Thumbnail 10">
+                <span>Video 18: Iterators and Generators</span>
+            </div>
+            <div class="video-item" onclick="playVideo('video/python/video10.mp4', 'Automation with Python')">
+                <img src="video/python/thumbnail10.jpg" alt="Thumbnail 10">
+                <span>Video 19: Defining and Calling Functions</span>
+            </div>
+            <div class="video-item" onclick="playVideo('video/python/video10.mp4', 'Automation with Python')">
+                <img src="video/python/thumbnail10.jpg" alt="Thumbnail 10">
+                <span>Video 20: Return Statements</span>
+            </div>
+            <div class="video-item" onclick="playVideo('video/python/video10.mp4', 'Automation with Python')">
+                <img src="video/python/thumbnail10.jpg" alt="Thumbnail 10">
+                <span>Video 21: Anonymous Functions</span>
+            </div>
+            <div class="video-item" onclick="playVideo('video/python/video10.mp4', 'Automation with Python')">
+                <img src="video/python/thumbnail10.jpg" alt="Thumbnail 10">
+                <span>Video 22: Modules and the inmport statement</span>
+            </div>
+            <div class="video-item" onclick="playVideo('video/python/video10.mp4', 'Automation with Python')">
+                <img src="video/python/thumbnail10.jpg" alt="Thumbnail 10">
+                <span>Video 23: Standard Library Modules</span>
+            </div>
+            <div class="video-item" onclick="playVideo('video/python/video10.mp4', 'Automation with Python')">
+                <img src="video/python/thumbnail10.jpg" alt="Thumbnail 10">
+                <span>Video 24: Function Arguments </span>
+            </div>
+            <div class="video-item" onclick="playVideo('video/python/video10.mp4', 'Automation with Python')">
+                <img src="video/python/thumbnail10.jpg" alt="Thumbnail 10">
+                <span>Video 25: Reading and writing Files</span>
+            </div>
+            <div class="video-item" onclick="playVideo('video/python/video10.mp4', 'Automation with Python')">
+                <img src="video/python/thumbnail10.jpg" alt="Thumbnail 10">
+                <span>Video 26: Working with CSV files</span>
+            </div>
+            <div class="video-item" onclick="playVideo('video/python/video10.mp4', 'Automation with Python')">
+                <img src="video/python/thumbnail10.jpg" alt="Thumbnail 10">
+                <span>Video 27: Handling JSON Data</span>
+            </div>
+            <div class="video-item" onclick="playVideo('video/python/video10.mp4', 'Automation with Python')">
+                <img src="video/python/thumbnail10.jpg" alt="Thumbnail 10">
+                <span>Video 28: File and Directory Operations</span>
+            </div>
+            <div class="video-item" onclick="playVideo('video/python/video10.mp4', 'Automation with Python')">
+                <img src="video/python/thumbnail10.jpg" alt="Thumbnail 10">
+                <span>Video 29: Classes and Objects</span>
+            </div>
+            <div class="video-item" onclick="playVideo('video/python/video10.mp4', 'Automation with Python')">
+                <img src="video/python/thumbnail10.jpg" alt="Thumbnail 10">
+                <span>Video 30: Constructors</span>
+            </div>
+            <div class="video-item" onclick="playVideo('video/python/video10.mp4', 'Automation with Python')">
+                <img src="video/python/thumbnail10.jpg" alt="Thumbnail 10">
+                <span>Video 31: Inheritance</span>
+            </div>
+            <div class="video-item" onclick="playVideo('video/python/video10.mp4', 'Automation with Python')">
+                <img src="video/python/thumbnail10.jpg" alt="Thumbnail 10">
+                <span>Video 32: Method Overriding</span>
+            </div>
+            <div class="video-item" onclick="playVideo('video/python/video10.mp4', 'Automation with Python')">
+                <img src="video/python/thumbnail10.jpg" alt="Thumbnail 10">
+                <span>Video 33: Encapsulation and Polymorphism</span>
+            </div>
+            <div class="video-item" onclick="playVideo('video/python/video10.mp4', 'Automation with Python')">
+                <img src="video/python/thumbnail10.jpg" alt="Thumbnail 10">
+                <span>Video 34: Special Methods</span>
+            </div>
+            <div class="video-item" onclick="playVideo('video/python/video10.mp4', 'Automation with Python')">
+                <img src="video/python/thumbnail10.jpg" alt="Thumbnail 10">
+                <span>Video 35: Decorators</span>
+            </div>
+            <div class="video-item" onclick="playVideo('video/python/video10.mp4', 'Automation with Python')">
+                <img src="video/python/thumbnail10.jpg" alt="Thumbnail 10">
+                <span>Video 36: List, dictionary, and set comprehensions</span>
+            </div>
+            <div class="video-item" onclick="playVideo('video/python/video10.mp4', 'Automation with Python')">
+                <img src="video/python/thumbnail10.jpg" alt="Thumbnail 10">
+                <span>Video 37: Working with Dates and Times</span>
+            </div>
+            <div class="video-item" onclick="playVideo('video/python/video10.mp4', 'Automation with Python')">
+                <img src="video/python/thumbnail10.jpg" alt="Thumbnail 10">
+                <span>Video 38: Multi-threading and multiprocessing </span>
+            </div>
+            <div class="video-item" onclick="playVideo('video/python/video10.mp4', 'Automation with Python')">
+                <img src="video/python/thumbnail10.jpg" alt="Thumbnail 10">
+                <span>Video 39: Context Managers</span>
+            </div>
+            <div class="video-item" onclick="playVideo('video/python/video10.mp4', 'Automation with Python')">
+                <img src="video/python/thumbnail10.jpg" alt="Thumbnail 10">
+                <span>Video 40: Regular Expressions</span>
+            </div>
+        </div>
+
+        <!-- Video Container -->
+        <div class="col-md-9 video-container">
+            <div class="video-title" id="videoTitle">Introduction to Python</div>
+            <video id="videoPlayer" controls>
+                <source src="video/video1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="d-flex justify-content-center gap-3">
+                <button class="btn btn-custom" onclick="togglePlayPause()">Play/Pause</button>
+                <button class="btn btn-custom" onclick="restartVideo()">Restart</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const videoPlayer = document.getElementById('videoPlayer');
+    const videoTitle = document.getElementById('videoTitle');
+
+    function playVideo(videoSrc, title) {
+        videoPlayer.src = videoSrc;
+        videoPlayer.play();
+        videoTitle.textContent = title;
+    }
+
+    function togglePlayPause() {
+        if (videoPlayer.paused) {
+            videoPlayer.play();
+        } else {
+            videoPlayer.pause();
+        }
+    }
+
+    function restartVideo() {
+        videoPlayer.currentTime = 0;
+        videoPlayer.play();
+    }
+</script>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
